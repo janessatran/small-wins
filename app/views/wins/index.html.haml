@@ -1,11 +1,11 @@
 %section.container
-  %h1 Small Wins 
+  %h1 ✨ Small Wins 
   %h2 A list of small wins I make each day
   %table.small-wins-table
     %tr
     - @csv_table.headers.each do |header|
       %th= header
-    -@csv_table.each do |row|
+    -@csv_table.reverse_each do |row|
       %tr 
       - row.each do |element|
         - if element[1].include?("https")

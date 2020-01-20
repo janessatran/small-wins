@@ -1,11 +1,36 @@
-h1 {
-  color: red;
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Quicksand&display=swap');
+
+h1, h2, h3 {
+  font-family: 'Lato', serif;
 }
- body {
-   font-family: Arial, Helvetica, sans-serif;
-   font-size: 1rem;
+h1 {
+  color: white;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #DCD0C0;
  }
 
 table {
-  border-spacing: 0.5rem;
+  width: 100%;
+  margin: auto;
+}
+
+table, th, td {
+  border: 1px solid #fff;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px;
 }
