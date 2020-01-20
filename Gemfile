@@ -35,8 +35,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem "figaro"
 gem "google_drive"
-gem "haml-rails"
 gem "haml"
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
