@@ -1,5 +1,7 @@
 require 'csv'
 require 'json'
+require 'googleauth'
+
 
 class GoogleSheetsReader
   
@@ -7,7 +9,9 @@ class GoogleSheetsReader
 
   def initialize
     @title = "Win List"
-    @session = GoogleDrive::Session.from_service_account_key("./config/client_secret.json")
+    key = JSON.parse(JSON.dump(ENV["google_sheets_client_secret"]))
+    @session = GoogleDrive::Session.from_service_account_key(StringIO.new(key))
+    # @session = GoogleDrive::Session.from_service_account_key("./config/client_secret.json")
   end
 
   def get_wins

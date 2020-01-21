@@ -242,6 +242,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   figaro
   google_drive
+  googleauth
   haml
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)

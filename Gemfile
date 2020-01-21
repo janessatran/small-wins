@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem "figaro"
 gem "google_drive"
+gem "googleauth"
 gem "haml"
 
 # Reduces boot times through caching; required in config/boot.rb
