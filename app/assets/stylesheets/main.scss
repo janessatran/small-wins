@@ -1,20 +1,17 @@
-// * {cursor: url("https://items.jellyneo.net/assets/imgs/items/2782.gif?231") , auto !important;}
 
 h1 {
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
-
-
 h2 {
-  font-size: 1.5rem;
+  font-size: 2.2rem;
 }
 
 body {
-  font-family: 'Courier New', sans-serif;
-  font-size: 1rem;
-  max-width: 1000px;
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  max-width: 90%;
   margin: 0 auto;
   background: rgb(0, 0, 0);
   color: white;
@@ -48,4 +45,41 @@ a:hover {
 
 a:clicked {
   color: yellow;
+}
+
+/* List */
+ul {
+  counter-reset: index;  
+  padding: 0;
+  max-width: 300px;
+}
+
+/* List element */
+li {
+  counter-increment: index; 
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 5%;
+}
+
+
+/* Element counter */
+li::before {
+  content: counters(index, ".", decimal-leading-zero);
+  text-align: left;
+  font-weight: bold;
+  min-width: 10%;
+  font-variant-numeric: tabular-nums;
+  align-self: flex-start;
+  background-image: linear-gradient(to bottom, aquamarine, orangered);
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Element separation */
+li + li {
+  border-top: 1px solid rgba(255,255,255,0.2);
 }

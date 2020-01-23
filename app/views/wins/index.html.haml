@@ -1,18 +1,13 @@
 %section.container
   %h1 A list of my Small Wins 
   %h2 Because success is a series of small wins...
-  %table.small-wins-table
-    %tr
-    - @csv_table.headers.each do |header|
-      %th= header
-    -@csv_table.reverse_each do |row|
-      %tr 
-      - row.each do |element|
-        - if element[1].include?("https")
-          %td= link_to element[1], element[1]
-        - else
-          %td= element[1]
-      
+  %ul
+  -@csv_table.each do |row|
+    
+    %li
+      = row["Small Win"]
+
+
 
 
     
